@@ -5,7 +5,20 @@ import "izitoast/dist/css/iziToast.min.css";
 
 
  const startButton = document.querySelector('[data-start]');
-    const dateTimePicker = document.querySelector('#datetime-picker');
+const dateTimePicker = document.querySelector('#datetime-picker');
+    
+dateTimePicker.addEventListener('change', function() {
+  const selectedDate = new Date(this.value);
+  const currentDate = new Date();
+
+  if (selectedDate > currentDate) {
+    startButton.classList.add('active');
+    startButton.disabled = false;
+  } else {
+    startButton.classList.remove('active');
+    startButton.disabled = true;
+  }
+});
     const timerValues = {
       days: document.querySelector('[data-days]'),
       hours: document.querySelector('[data-hours]'),
@@ -39,7 +52,7 @@ import "izitoast/dist/css/iziToast.min.css";
 
     startButton.addEventListener('click', startTimer);
 
-    function startTimer() {
+function startTimer() {
       startButton.disabled = true;
       dateTimePicker.disabled = true;
 
@@ -82,4 +95,7 @@ import "izitoast/dist/css/iziToast.min.css";
 
     function addLeadingZero(value) {
       return String(value).padStart(2, '0');
-    }
+}
+   
+
+

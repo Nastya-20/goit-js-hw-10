@@ -3,6 +3,7 @@ font-family: "Montserrat", "Regular", sans-serif;
 }
 a {
     cursor: pointer;
+    margin: 32px;
 }
 h1 {
     color: #4e75ff;
@@ -12,6 +13,11 @@ h1 {
 }
 ul {
     list-style: none;
+}
+input {
+    padding: 0;
+    outline: none;
+
 }
    /* Timer */
 
@@ -32,7 +38,12 @@ ul {
     color: #2e2f42;
 }
 #datetime-picker:hover {
-    border: 1px solid #000;
+    border: 1px solid #4e75ff;
+}
+
+#datetime-picker:focus,
+ #datetime-picker:active {
+    border: 1px solid #4e75ff;
 }
 button {
     border-radius: 8px;
@@ -51,6 +62,9 @@ button {
 }
 button:hover {
     background: #6c8cff;
+}
+button:active {
+    background: #4e75ff;
 }
 button:disabled{
     background: #cfcfcf;
