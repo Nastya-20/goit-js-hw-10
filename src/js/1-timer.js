@@ -4,7 +4,7 @@ import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 
 
- const startButton = document.querySelector('[data-start]');
+const startButton = document.querySelector('[data-start]');
 const dateTimePicker = document.querySelector('#datetime-picker');
     
 dateTimePicker.addEventListener('change', function() {
