@@ -6,19 +6,7 @@ import "izitoast/dist/css/iziToast.min.css";
 
 const startButton = document.querySelector('[data-start]');
 const dateTimePicker = document.querySelector('#datetime-picker');
-    
-dateTimePicker.addEventListener('change', function() {
-  const selectedDate = new Date(this.value);
-  const currentDate = new Date();
 
-  if (selectedDate > currentDate) {
-    startButton.classList.add('active');
-    startButton.disabled = false;
-  } else {
-    startButton.classList.remove('active');
-    startButton.disabled = true;
-  }
-});
     const timerValues = {
       days: document.querySelector('[data-days]'),
       hours: document.querySelector('[data-hours]'),
