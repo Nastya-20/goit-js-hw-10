@@ -52,6 +52,7 @@ function startTimer() {
           clearInterval(timerId);
           updateTimerDisplay(0, 0, 0, 0);
           dateTimePicker.disabled = false;
+          startButton.disabled = false;
           return;
         }
 
